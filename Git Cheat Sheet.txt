@@ -1,0 +1,49 @@
+# sets up the repo
+git init
+
+# creates the origin reference
+git remote add origin https://github.com/Molibar/ProjectZero.git
+
+# uses the created origin reference to tie the upstream branch to the current branch
+git branch --set-upstream-to=origin/<branch_name>
+
+# alternative way to set the upstream branch on push/pull
+git push -u origin master
+
+
+# create a new repository on GitHub
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/Molibar/Useful.git
+git push -u origin master
+
+
+
+
+# unstage file without undoing changes in file
+git reset README.md
+
+# undo changes in file (only works for unstaged)
+git checkout README.md
+
+# unstage file and undo changes
+git reset --hard
+
+# delete local and remote branch
+git push origin --delete <branch_name>
+
+
+# file contains path to file with the current branch's HEAD's commit hash
+cat .git/HEAD
+
+# this file contains the HEAD's commit hash of the master branch
+$ cat .git/refs/heads/master
+
+# undo the last commit
+git reset --hard HEAD~
+
+# undo the last two commits
+git reset --hard HEAD~2
+git reset --hard HEAD~~
