@@ -20,6 +20,17 @@ git remote add origin https://github.com/Molibar/Useful.git
 git push -u origin master
 
 
+## Merge in pull requests
+# Step 1: From your project repository, bring in the changes and test.
+git fetch origin
+git checkout -b story/pz-5 origin/story/pz-5
+git merge master
+
+#Step 2: Merge the changes and update on GitHub.
+git checkout master
+git merge --no-ff story/pz-5
+git push origin master
+
 
 
 # unstage file without undoing changes in file
