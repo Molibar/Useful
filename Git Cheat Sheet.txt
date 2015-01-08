@@ -1,6 +1,9 @@
 # sets up the repo
 git init
 
+# show remotes
+git remote show
+
 # creates the origin reference
 git remote add origin https://github.com/Molibar/ProjectZero.git
 
@@ -58,3 +61,9 @@ git reset --hard HEAD~
 # undo the last two commits
 git reset --hard HEAD~2
 git reset --hard HEAD~~
+
+# will list branches containing the string
+git branch -r | grep -i "story/facebook/sam-12"
+
+# get branch structure
+git log --graph --pretty=oneline --decorate
